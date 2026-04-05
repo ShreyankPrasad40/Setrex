@@ -125,14 +125,19 @@
   transform: scale(1.02);
 }
 
+@keyframes bounceLeftRight {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
 .contactArrow {
   opacity: 0.8;
   stroke-width: 2;
-  transition: transform 0.2s ease;
-}
-
-.contactBtn:hover .contactArrow {
-  transform: translateX(4px);
+  animation: bounceLeftRight 1.5s ease-in-out infinite;
 }
 
 .chevronIcon {
@@ -143,6 +148,33 @@
   stroke-width: 30;
   color: #fff;
   transition: transform 0.2s ease, stroke 0.2s ease, color 0.2s ease;
+}
+
+.mobileContactBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  background-color: #D4FF33;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  padding: 16px 24px;
+  border-radius: 99px;
+  width: 100%;
+}
+
+.mobileContactBtn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.mobileContactBtn .contactArrow {
+  opacity: 1;
 }
 
 .dropdownContainer {

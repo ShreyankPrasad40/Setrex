@@ -319,6 +319,20 @@
   gap: 8px;
 }
 
+@keyframes bounceLeftRightPricing {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+.arrow, .arrowDark {
+  display: inline-block;
+  animation: bounceLeftRightPricing 1.5s ease-in-out infinite;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .container {

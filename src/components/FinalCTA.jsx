@@ -27,8 +27,8 @@ export default function FinalCTA() {
         </p>
         <div className={styles.actions}>
           <a href="#" className={styles.getStartedBtn}>
-            <HiArrowRight size={20} />
             Get Started Now
+            <HiArrowRight size={20} className={styles.getStartedArrow} />
           </a>
           <a href="#" className={styles.pricingBtn}>
             See Pricing

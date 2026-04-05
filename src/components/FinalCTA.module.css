@@ -90,6 +90,19 @@
   background: #c2ea39;
 }
 
+@keyframes bounceLeftRightCTA {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+.getStartedArrow {
+  animation: bounceLeftRightCTA 1.5s ease-in-out infinite;
+}
+
 .pricingBtn {
   background: #ffffff;
   color: #000000;

@@ -20,7 +20,8 @@ export const StaggeredMenu = ({
   isFixed = false,
   closeOnClickAway = true,
   onMenuOpen,
-  onMenuClose
+  onMenuClose,
+  bottomContent = null
 }) => {
   const [open, setOpen] = useState(false);
   const openRef = useRef(false);
@@ -88,6 +89,7 @@ export const StaggeredMenu = ({
     const numberEls = Array.from(panel.querySelectorAll('.sm-panel-list[data-numbering] .sm-panel-item'));
     const socialTitle = panel.querySelector('.sm-socials-title');
     const socialLinks = Array.from(panel.querySelectorAll('.sm-socials-link'));
+    const bottomElement = panel.querySelector('.sm-bottom-content');
 
     const layerStates = layers.map(el => ({ el, start: Number(gsap.getProperty(el, 'xPercent')) }));
     const panelStart = Number(gsap.getProperty(panel, 'xPercent'));
@@ -103,6 +105,9 @@ export const StaggeredMenu = ({
     }
     if (socialLinks.length) {
       gsap.set(socialLinks, { y: 25, opacity: 0 });
+    }
+    if (bottomElement) {
+      gsap.set(bottomElement, { y: 25, opacity: 0 });
     }
 
     const tl = gsap.timeline({ paused: true });
@@ -161,9 +166,9 @@ export const StaggeredMenu = ({
           socialsStart
         );
       }
-      if (socialLinks.length) {
+      if (socialLinks.length || bottomElement) {
         tl.to(
-          socialLinks,
+          [...socialLinks, bottomElement].filter(Boolean),
           {
             y: 0,
             opacity: 1,
@@ -171,7 +176,7 @@ export const StaggeredMenu = ({
             ease: 'power3.out',
             stagger: { each: 0.08, from: 'start' },
             onComplete: () => {
-              gsap.set(socialLinks, { clearProps: 'opacity' });
+              gsap.set([...socialLinks, bottomElement].filter(Boolean), { clearProps: 'opacity' });
             }
           },
           socialsStart + 0.04
@@ -225,8 +230,10 @@ export const StaggeredMenu = ({
         }
         const socialTitle = panel.querySelector('.sm-socials-title');
         const socialLinks = Array.from(panel.querySelectorAll('.sm-socials-link'));
+        const bottomElement = panel.querySelector('.sm-bottom-content');
         if (socialTitle) gsap.set(socialTitle, { opacity: 0 });
         if (socialLinks.length) gsap.set(socialLinks, { y: 25, opacity: 0 });
+        if (bottomElement) gsap.set(bottomElement, { y: 25, opacity: 0 });
         busyRef.current = false;
       }
     });
@@ -445,6 +452,11 @@ export const StaggeredMenu = ({
                   </li>
                 ))}
               </ul>
+            </div>
+          )}
+          {bottomContent && (
+            <div className="sm-bottom-content">
+              {bottomContent}
             </div>
           )}
         </div>
