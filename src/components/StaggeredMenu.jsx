@@ -225,9 +225,14 @@ export const StaggeredMenu = ({
     const all = [...layers, panel];
     closeTweenRef.current?.kill();
     const offscreen = position === 'left' ? -100 : 100;
+
+    // Immediately fade out the text items so it doesn't look slow
+    const textEls = panel.querySelectorAll('.sm-panel-item, .sm-socials, .sm-bottom-content');
+    gsap.to(textEls, { opacity: 0, duration: 0.15, ease: 'power2.in' });
+
     closeTweenRef.current = gsap.to(all, {
       xPercent: offscreen,
-      duration: 0.32,
+      duration: 0.25,
       ease: 'power3.in',
       overwrite: 'auto',
       onComplete: () => {
@@ -245,6 +250,9 @@ export const StaggeredMenu = ({
         if (socialTitle) gsap.set(socialTitle, { opacity: 0 });
         if (socialLinks.length) gsap.set(socialLinks, { y: 25, opacity: 0 });
         if (bottomElement) gsap.set(bottomElement, { y: 25, opacity: 0 });
+        
+        // Clear opacity from text items for next open
+        gsap.set(textEls, { clearProps: 'opacity' });
         
         // Restore scroll position cleanly
         document.body.style.position = '';
