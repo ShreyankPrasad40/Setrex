@@ -264,6 +264,10 @@
   .bottomGrid {
     grid-template-columns: 1fr;
   }
+  .title {
+    font-size: 32px;
+    padding: 0 10px;
+  }
   .integrationCard, .supportCard {
     min-height: 400px;
   }
@@ -276,13 +280,20 @@
 }
 
 @media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+    padding: 0;
+  }
   .cardTitle {
-    font-size: 32px;
+    font-size: 26px;
   }
   .cardContent {
-    padding: 40px 24px;
+    padding: 40px 20px;
   }
   .cardFooter {
-    padding: 30px 24px;
+    padding: 30px 20px;
+  }
+  .smallCardTitle {
+    font-size: 22px;
   }
 }

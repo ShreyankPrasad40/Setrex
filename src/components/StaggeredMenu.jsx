@@ -45,15 +45,15 @@ export const StaggeredMenu = ({
   const busyRef = useRef(false);
   const itemEntranceTweenRef = useRef(null);
 
+  const scrollPosRef = useRef(0);
+
   React.useEffect(() => {
     if (open) {
-      document.body.style.overflowY = 'hidden';
-    } else {
-      document.body.style.overflowY = 'auto';
+      scrollPosRef.current = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollPosRef.current}px`;
+      document.body.style.width = '100%';
     }
-    return () => {
-      document.body.style.overflowY = 'auto';
-    };
   }, [open]);
 
   useLayoutEffect(() => {
@@ -245,6 +245,14 @@ export const StaggeredMenu = ({
         if (socialTitle) gsap.set(socialTitle, { opacity: 0 });
         if (socialLinks.length) gsap.set(socialLinks, { y: 25, opacity: 0 });
         if (bottomElement) gsap.set(bottomElement, { y: 25, opacity: 0 });
+        
+        // Restore scroll position cleanly
+        document.body.style.position = '';
+        const scrollY = document.body.style.top;
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        
         busyRef.current = false;
       }
     });
