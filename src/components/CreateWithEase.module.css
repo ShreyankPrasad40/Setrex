@@ -1,0 +1,288 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  color: #fff;
+  z-index: 10;
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* CARDS COMMON */
+.topCard, .integrationCard, .supportCard {
+  background-color: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 32px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* TOP CARD (WIDE) */
+.topCard {
+  display: flex;
+  width: 100%;
+  margin-bottom: 24px;
+  min-height: 500px;
+}
+
+.cardContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 80px 60px;
+  max-width: 45%;
+  z-index: 2;
+}
+
+.cardBadge {
+  background-color: #d8fad3;
+  color: #0b2b00;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.cardTitle {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 24px;
+}
+
+.cardDescription {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.mockupContainer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+  padding-top: 60px;
+}
+
+.browserWindow {
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: none;
+  border-right: none;
+  border-top-left-radius: 16px;
+  width: 110%;
+  height: auto;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: -10px -10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.browserHeader {
+  display: flex;
+  gap: 8px;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dotRed { width: 12px; height: 12px; border-radius: 50%; background-color: #ff5f56; }
+.dotYellow { width: 12px; height: 12px; border-radius: 50%; background-color: #ffbd2e; }
+.dotGreen { width: 12px; height: 12px; border-radius: 50%; background-color: #27c93f; }
+
+.browserBody {
+  display: flex;
+  flex: 1;
+  padding: 24px;
+  gap: 24px;
+}
+
+.sidebar {
+  width: 90px;
+  padding-right: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skeletonLine { height: 10px; background-color: rgba(255, 255, 255, 0.05); border-radius: 4px; width: 100%; }
+.skeletonLineLong { height: 10px; background-color: rgba(255, 255, 255, 0.05); border-radius: 4px; width: 80%; }
+.skeletonLineShort { height: 10px; background-color: rgba(255, 255, 255, 0.05); border-radius: 4px; width: 60%; }
+.skeletonSpace { height: 30px; }
+
+.row { display: flex; gap: 16px; }
+
+.largeCard {
+  flex: 1.5;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.circle { width: 60px; height: 60px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.04); flex-shrink: 0; }
+.lines { flex: 1; display: flex; flex-direction: column; gap: 12px; }
+
+.thinCard { flex: 1; background-color: rgba(255, 255, 255, 0.02); border-radius: 12px; }
+.wideCard { flex: 1; background-color: rgba(255, 255, 255, 0.02); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+
+/* BOTTOM GRID */
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+.integrationCard, .supportCard {
+  display: flex;
+  flex-direction: column;
+  min-height: 480px;
+}
+
+.orbitWrapper {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.supportVisual {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bgText {
+  font-size: 180px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
+
+.supportBadge {
+  background-color: #d4ff3f;
+  color: #000;
+  padding: 12px 32px;
+  border-radius: 99px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  box-shadow: 0 10px 40px rgba(212, 255, 63, 0.3);
+  z-index: 2;
+}
+
+.cardFooter {
+  padding: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.smallCardTitle {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.smallCardDescription {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .topCard {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .cardContent {
+    max-width: 100%;
+    padding: 60px 40px;
+  }
+  .mockupContainer {
+    padding-left: 40px;
+  }
+  .browserWindow {
+    width: 120%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 60px 20px;
+  }
+  .bottomGrid {
+    grid-template-columns: 1fr;
+  }
+  .integrationCard, .supportCard {
+    min-height: 400px;
+  }
+  .bgText {
+    font-size: 120px;
+  }
+  .topCard {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardTitle {
+    font-size: 32px;
+  }
+  .cardContent {
+    padding: 40px 24px;
+  }
+  .cardFooter {
+    padding: 30px 24px;
+  }
+}

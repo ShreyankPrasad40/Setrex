@@ -1,0 +1,20 @@
+.iconWrapper {
+  display: inline-flex;
+  transform-origin: center;
+  animation: floatWiggle 2s ease-in-out infinite;
+}
+
+@keyframes floatWiggle {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-2px) scale(1.05) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(-2px) scale(1.05) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}

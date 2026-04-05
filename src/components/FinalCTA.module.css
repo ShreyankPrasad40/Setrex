@@ -1,0 +1,151 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto 60px auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.mockupWrapper {
+  flex: 1;
+  position: relative;
+}
+
+.mockupImage {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1) translateX(-40px); /* Add a bit of dynamic placement */
+}
+
+.content {
+  flex: 1;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 32px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: #d4ff3f;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #d4ff3f;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 48px;
+  max-width: 500px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+}
+
+.getStartedBtn {
+  background: #d4ff3f;
+  color: #000000;
+  padding: 16px 32px;
+  border-radius: 100px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.getStartedBtn:hover {
+  transform: translateY(-2px);
+  background: #c2ea39;
+}
+
+.pricingBtn {
+  background: #ffffff;
+  color: #000000;
+  padding: 16px 32px;
+  border-radius: 100px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 16px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.pricingBtn:hover {
+  transform: translateY(-2px);
+  background: #f0f0f0;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 40px;
+  }
+  
+  .container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+    padding: 0 24px;
+    margin-bottom: 60px;
+  }
+  
+  .mockupImage {
+    transform: none;
+    max-width: 100%;
+  }
+  
+  .subtitle {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+  }
+  
+  .actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 28px;
+    padding: 0 10px;
+  }
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .getStartedBtn, .pricingBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

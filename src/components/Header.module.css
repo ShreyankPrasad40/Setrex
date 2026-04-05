@@ -1,0 +1,241 @@
+.headerContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  z-index: 1000;
+  color: white;
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+}
+
+@media (max-width: 1200px) {
+  .headerContainer {
+    padding: 1.5rem 2rem;
+  }
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brandName {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .brandName {
+    font-size: 2rem; /* Significantly larger on tablet */
+  }
+  .leftSection {
+    gap: 0.75rem;
+  }
+  .logoIcon img {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .brandName {
+    font-size: 1.5rem;
+  }
+  .leftSection {
+    gap: 0.25rem;
+  }
+  .logoIcon img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+}
+
+.centerSection {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rightSection {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #fff;
+  font-size: 1.15rem; /* Increased font size */
+  font-weight: 600; /* Made text bold */
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.navLink:hover {
+  opacity: 0.8;
+}
+
+.chevron {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid #fff;
+  border-bottom: 1.5px solid #fff;
+  transform: rotate(45deg);
+  margin-bottom: 3px;
+}
+
+.contactBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #161616;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 99px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.contactBtn:hover {
+  background-color: #222222;
+  transform: scale(1.02);
+}
+
+.contactArrow {
+  opacity: 0.8;
+  stroke-width: 2;
+  transition: transform 0.2s ease;
+}
+
+.contactBtn:hover .contactArrow {
+  transform: translateX(4px);
+}
+
+.chevronIcon {
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+  stroke: #ffffff;
+  stroke-width: 30;
+  color: #fff;
+  transition: transform 0.2s ease, stroke 0.2s ease, color 0.2s ease;
+}
+
+.dropdownContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.dropdownContainer:hover .navLink {
+  color: #D4FF33;
+}
+
+.dropdownContainer:hover .chevronIcon {
+  transform: rotate(180deg);
+  stroke: #D4FF33;
+  color: #D4FF33;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  right: -50px;
+  background-color: #030303;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  gap: 48px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  min-width: max-content;
+  z-index: 1001;
+}
+
+.dropdownContainer:hover .dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdownColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dropdownColumn h4 {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  letter-spacing: -0.01em;
+}
+
+.dropdownLink {
+  color: #999;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+  font-weight: 400;
+}
+
+.dropdownLink:hover {
+  color: #fff;
+}
+
+.dropdownDivider {
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0;
+}
+
+.mobileMenuWrapper {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .headerContainer {
+    display: none !important;
+  }
+  .mobileMenuWrapper {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+  }
+}

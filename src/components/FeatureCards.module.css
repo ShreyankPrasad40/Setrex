@@ -1,0 +1,263 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 20px 20px 80px 20px;
+  color: #fff;
+  z-index: 10;
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #0e0e0e;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  min-height: 400px;
+}
+
+@media (max-width: 640px) {
+  .card {
+    min-height: 320px;
+  }
+}
+
+.cardContent {
+  padding: 30px;
+  flex-shrink: 0;
+}
+
+.cardTitle {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+}
+
+.cardDescription {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* LEFT CARD: INTEGRATION */
+.integrationVisual {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 40px;
+}
+
+.circleSystem {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ring1,
+.ring2,
+.ring3 {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.ring1 {
+  width: 100px;
+  height: 100px;
+}
+
+.ring2 {
+  width: 180px;
+  height: 180px;
+}
+
+.ring3 {
+  width: 280px;
+  height: 280px;
+}
+
+.centerLogo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #D4FF33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 40px rgba(212, 255, 51, 0.2);
+}
+
+.orbitItem {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Random positioning for icons resembling the mockup */
+.orbitItem1 {
+  top: -10px;
+  right: 20px;
+}
+
+.orbitItem2 {
+  top: 20px;
+  left: 30px;
+  width: 24px;
+  height: 24px;
+}
+
+.orbitItem3 {
+  bottom: 40px;
+  right: 10px;
+}
+
+.orbitItem4 {
+  bottom: 20px;
+  left: 40px;
+}
+
+.orbitItem5 {
+  bottom: -20px;
+  left: 10px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+}
+
+@media (max-width: 640px) {
+  .circleSystem {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 480px) {
+  .circleSystem {
+    transform: scale(0.7);
+  }
+  .integrationVisual {
+    padding: 20px;
+  }
+}
+
+.innerDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.solidHex {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 4px;
+  transform: rotate(45deg);
+}
+
+/* RIGHT CARD: SUPPORT */
+.supportVisual {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hugeText {
+  position: absolute;
+  font-size: 240px;
+  font-weight: 800;
+  line-height: 1;
+  color: #1a1a1a;
+  white-space: nowrap;
+  letter-spacing: -10px;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
+
+.greenGlow {
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  background-color: #D4FF33;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.15;
+  z-index: 2;
+}
+
+.supportBtn {
+  position: relative;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #D4FF33;
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 99px;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(212, 255, 51, 0.3);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .card {
+    text-align: center;
+    align-items: center;
+    min-height: 380px;
+  }
+  .cardTitle {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cardTitle {
+    font-size: 20px;
+  }
+  .hugeText {
+    font-size: 140px;
+    letter-spacing: -5px;
+  }
+}

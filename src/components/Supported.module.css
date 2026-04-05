@@ -1,0 +1,192 @@
+.container {
+  width: 100%;
+  padding: 80px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  background-color: #000;
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+.heading {
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 64px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.leftCard {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.badgeLeft {
+  display: inline-block;
+  background-color: #e0ff99;
+  color: #000;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 6px;
+  align-self: flex-start;
+  margin-bottom: 40px;
+}
+
+.quote {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 22px;
+  line-height: 1.6;
+  font-weight: 400;
+  flex: 1; /* Pushes bottom area down */
+  margin: 0 0 48px 0;
+  letter-spacing: -0.2px;
+}
+
+.leftBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profileArea {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profilePic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileInfo h4 {
+  color: #fff;
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.profileInfo span {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 14px;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+}
+
+.brandName {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.rightCard {
+  padding: 48px 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.stat {
+  font-size: 56px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.badgeRight {
+  display: inline-block;
+  background-color: #d1f5d3;
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 40px 16px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .heading {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  .leftCard, .rightCard {
+    padding: 32px 24px;
+  }
+  .stat {
+    font-size: 40px;
+  }
+  .quote {
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 600px) {
+  .heading {
+    font-size: 26px;
+    padding: 0 16px;
+  }
+  .stat {
+    font-size: 32px;
+  }
+  .quote {
+    font-size: 16px;
+  }
+  .leftBottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,134 @@
+.container {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.centerLogo {
+  width: 100px;
+  height: 100px;
+  background-color: #d4ff3f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 40px rgba(212, 255, 63, 0.4);
+  z-index: 10;
+  position: relative;
+}
+
+.centerIcon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background Orbits */
+.orbit1, .orbit2, .orbit3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.orbit1 { width: 220px; height: 220px; }
+.orbit2 { width: 400px; height: 400px; }
+.orbit3 { width: 580px; height: 580px; }
+
+/* Orbiting Icons common */
+.orbitingIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0; /* will be used with margin and translate */
+  z-index: 5;
+}
+
+.iconContent {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.iconContent:hover {
+  transform: scale(1.1);
+  border-color: #d4ff3f;
+  color: #d4ff3f;
+}
+
+/* Orbit 1 specific (Inner) - Radius 110px */
+.orbit1Icon {
+  animation: orbit1 20s linear infinite;
+}
+
+@keyframes orbit1 {
+  from { transform: translate(-50%, -50%) rotate(0deg) translateY(-110px) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg) translateY(-110px) rotate(-360deg); }
+}
+
+/* Orbit 2 specific (Middle) - Radius 200px */
+.orbit2Icon {
+  animation: orbit2 30s linear infinite;
+}
+
+@keyframes orbit2 {
+  from { transform: translate(-50%, -50%) rotate(0deg) translateY(-200px) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg) translateY(-200px) rotate(-360deg); }
+}
+
+/* Orbit 3 specific (Outer) - Radius 290px */
+.orbit3Icon {
+  animation: orbit3 45s linear infinite;
+}
+
+@keyframes orbit3 {
+  from { transform: translate(-50%, -50%) rotate(0deg) translateY(-290px) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg) translateY(-290px) rotate(-360deg); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    height: 400px;
+  }
+  .orbit1 { width: 140px; height: 140px; }
+  .orbit2 { width: 260px; height: 260px; }
+  .orbit3 { width: 380px; height: 380px; }
+  
+  .centerLogo { width: 60px; height: 60px; }
+  .iconContent { width: 40px; height: 40px; font-size: 18px; }
+
+  @keyframes orbit1 {
+    from { transform: translate(-50%, -50%) rotate(0deg) translateY(-70px) rotate(0deg); }
+    to   { transform: translate(-50%, -50%) rotate(360deg) translateY(-70px) rotate(-360deg); }
+  }
+  @keyframes orbit2 {
+    from { transform: translate(-50%, -50%) rotate(0deg) translateY(-130px) rotate(0deg); }
+    to   { transform: translate(-50%, -50%) rotate(360deg) translateY(-130px) rotate(-360deg); }
+  }
+  @keyframes orbit3 {
+    from { transform: translate(-50%, -50%) rotate(0deg) translateY(-190px) rotate(0deg); }
+    to   { transform: translate(-50%, -50%) rotate(360deg) translateY(-190px) rotate(-360deg); }
+  }
+}
