@@ -62,7 +62,7 @@ export default function Home() {
       <Partners />
       <FadeUp><Supported /></FadeUp>
       <FadeUp><CreateWithEase /></FadeUp>
-      <FadeUp><ProductShowcase /></FadeUp>
+      <ProductShowcase />
       <FadeUp><Integrations /></FadeUp>
       <FadeUp><Testimonials /></FadeUp>
       <FadeUp><Pricing /></FadeUp>
