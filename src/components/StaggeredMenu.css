@@ -17,6 +17,7 @@
 }
 
 .staggered-menu-wrapper[data-open] {
+  position: fixed;
   height: 100dvh;
   pointer-events: auto;
 }
