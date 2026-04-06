@@ -92,7 +92,7 @@ export default function Investors() {
     <section className={styles.container} ref={containerRef}>
       <div className={styles.header}>
         <h2 className={styles.title}>
-          Supported by leading AI and<br />future-of-work investors.
+          Supported by many<br />companies around the world
         </h2>
       </div>
 

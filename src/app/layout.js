@@ -18,6 +18,11 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Setrex - Modern Financial Management",
   description: "Setrex is your dedicated platform for custom-designed modular products and seamless financial integration.",
+  icons: {
+    icon: "/sitelogo.svg",
+    shortcut: "/sitelogo.svg",
+    apple: "/sitelogo.svg",
+  },
 };
 
 export default function RootLayout({ children }) {

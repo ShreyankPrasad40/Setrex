@@ -3,7 +3,6 @@ import styles from './Header.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
-import SetrexLogo from '../app/Setrex_logo.png';
 import StaggeredMenu from './StaggeredMenu';
 
 const menuItems = [
@@ -24,7 +23,7 @@ const socialItems = [
 const Logo = () => (
   <div className={styles.leftSection}>
     <div className={styles.logoIcon}>
-      <Image src={SetrexLogo} alt="Setrex Logo" width={24} height={24} />
+      <Image src="/sitelogo.svg" alt="Setrex Logo" width={24} height={24} priority />
     </div>
     <span className={styles.brandName}>Setrex.</span>
   </div>

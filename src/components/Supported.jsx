@@ -3,7 +3,7 @@ import styles from './Supported.module.css';
 import SpotlightCard from './SpotlightCard';
 import CountUp from './CountUp';
 import Image from 'next/image';
-import SetrexLogo from '../app/Setrex_logo.png';
+
 
 export default function Supported() {
   return (
@@ -26,7 +26,7 @@ export default function Supported() {
               </div>
             </div>
             <div className={styles.logoIcon}>
-              <Image src={SetrexLogo} alt="Setrex Logo" width={24} height={24} style={{ marginRight: '8px' }} />
+              <Image src="/sitelogo.svg" alt="Setrex Logo" width={24} height={24} style={{ marginRight: '8px' }} />
               <span className={styles.brandName}>Setrex.</span>
             </div>
           </div>

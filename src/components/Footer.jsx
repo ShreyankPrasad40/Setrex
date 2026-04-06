@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.css';
 import Image from 'next/image';
-import SetrexLogo from '../app/Setrex_logo.png';
 
 const Footer = () => {
   return (
@@ -12,7 +11,7 @@ const Footer = () => {
           <div className={styles.brandColumn}>
             <div className={styles.logo}>
               <div className={styles.logoIcon}>
-                <Image src={SetrexLogo} alt="Setrex Logo" width={24} height={24} />
+                <Image src="/sitelogo.svg" alt="Setrex Logo" width={24} height={24} />
               </div>
               <span className={styles.brandName}>Setrex.</span>
             </div>
