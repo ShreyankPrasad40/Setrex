@@ -12,6 +12,7 @@ import FinalCTA from "../components/FinalCTA";
 import Pricing from "../components/Pricing";
 import Footer from "../components/Footer";
 import FadeUp from "../components/FadeUp";
+import Investors from "../components/Investors";
 
 
 
@@ -62,6 +63,7 @@ export default function Home() {
       <Partners />
       <FadeUp><Supported /></FadeUp>
       <FadeUp><CreateWithEase /></FadeUp>
+      <FadeUp><Investors /></FadeUp>
       <ProductShowcase />
       <FadeUp><Integrations /></FadeUp>
       <FadeUp><Testimonials /></FadeUp>

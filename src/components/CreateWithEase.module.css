@@ -33,7 +33,9 @@
 }
 
 /* CARDS COMMON */
-.topCard, .integrationCard, .supportCard {
+.topCard,
+.integrationCard,
+.supportCard {
   background-color: #0a0a0a;
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 32px;
@@ -115,9 +117,26 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.dotRed { width: 12px; height: 12px; border-radius: 50%; background-color: #ff5f56; }
-.dotYellow { width: 12px; height: 12px; border-radius: 50%; background-color: #ffbd2e; }
-.dotGreen { width: 12px; height: 12px; border-radius: 50%; background-color: #27c93f; }
+.dotRed {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ff5f56;
+}
+
+.dotYellow {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ffbd2e;
+}
+
+.dotGreen {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #27c93f;
+}
 
 .browserBody {
   display: flex;
@@ -142,12 +161,35 @@
   gap: 16px;
 }
 
-.skeletonLine { height: 10px; background-color: rgba(255, 255, 255, 0.05); border-radius: 4px; width: 100%; }
-.skeletonLineLong { height: 10px; background-color: rgba(255, 255, 255, 0.05); border-radius: 4px; width: 80%; }
-.skeletonLineShort { height: 10px; background-color: rgba(255, 255, 255, 0.05); border-radius: 4px; width: 60%; }
-.skeletonSpace { height: 30px; }
+.skeletonLine {
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  width: 100%;
+}
 
-.row { display: flex; gap: 16px; }
+.skeletonLineLong {
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  width: 80%;
+}
+
+.skeletonLineShort {
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  width: 60%;
+}
+
+.skeletonSpace {
+  height: 30px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
 
 .largeCard {
   flex: 1.5;
@@ -159,11 +201,36 @@
   gap: 20px;
 }
 
-.circle { width: 60px; height: 60px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.04); flex-shrink: 0; }
-.lines { flex: 1; display: flex; flex-direction: column; gap: 12px; }
+.circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.04);
+  flex-shrink: 0;
+}
 
-.thinCard { flex: 1; background-color: rgba(255, 255, 255, 0.02); border-radius: 12px; }
-.wideCard { flex: 1; background-color: rgba(255, 255, 255, 0.02); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+.lines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.thinCard {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+}
+
+.wideCard {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
 /* BOTTOM GRID */
 .bottomGrid {
@@ -173,7 +240,8 @@
   width: 100%;
 }
 
-.integrationCard, .supportCard {
+.integrationCard,
+.supportCard {
   display: flex;
   flex-direction: column;
   min-height: 480px;
@@ -198,7 +266,7 @@
 }
 
 .bgText {
-  font-size: 180px;
+  font-size: 288px;
   font-weight: 900;
   color: rgba(255, 255, 255, 0.03);
   position: absolute;
@@ -245,13 +313,16 @@
     flex-direction: column;
     min-height: auto;
   }
+
   .cardContent {
     max-width: 100%;
     padding: 60px 40px;
   }
+
   .mockupContainer {
     padding-left: 40px;
   }
+
   .browserWindow {
     width: 120%;
   }
@@ -261,19 +332,25 @@
   .container {
     padding: 60px 20px;
   }
+
   .bottomGrid {
     grid-template-columns: 1fr;
   }
+
   .title {
     font-size: 32px;
     padding: 0 10px;
   }
-  .integrationCard, .supportCard {
+
+  .integrationCard,
+  .supportCard {
     min-height: 400px;
   }
+
   .bgText {
     font-size: 120px;
   }
+
   .topCard {
     margin-bottom: 24px;
   }
@@ -284,15 +361,19 @@
     font-size: 28px;
     padding: 0;
   }
+
   .cardTitle {
     font-size: 26px;
   }
+
   .cardContent {
     padding: 40px 20px;
   }
+
   .cardFooter {
     padding: 30px 20px;
   }
+
   .smallCardTitle {
     font-size: 22px;
   }
